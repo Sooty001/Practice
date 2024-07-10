@@ -1,29 +1,27 @@
-package org.example;
+package Table;
 import jakarta.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "залы")
 public class Halls {
+    private int id;
+    private int seats;
+    private String type;
+    private int hallNumber;
+    private Set<Pass> pass;
+
+
+    public Halls(int seats, String type, int hallNumber) {
+        setSeats(seats);
+        setType(type);
+        setHallNumber(hallNumber);
+    }
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(name = "Количество мест")
-    private int seats;
-    @Column(name = "Тип зала")
-    private String type;
-    @Column(name = "Номер зала")
-    private int hallNumber;
-
-
-    public Halls(int seats, String type, int hallNumber) {
-        this.seats = seats;
-        this.type = type;
-        this.hallNumber = hallNumber;
-    }
-
-
+    @Column(name = "id_зала")
     public int getId() {
         return id;
     }
@@ -31,7 +29,7 @@ public class Halls {
         this.id = id;
     }
 
-
+    @Column(name = "Количество мест")
     public int getSeats() {
         return seats;
     }
@@ -39,7 +37,7 @@ public class Halls {
         this.seats = seats;
     }
 
-
+    @Column(name = "Тип зала")
     public String getType() {
         return type;
     }
@@ -47,11 +45,16 @@ public class Halls {
         this.type = type;
     }
 
-
+    @Column(name = "Номер зала")
     public int getHallNumber() {
         return hallNumber;
     }
     public void setHallNumber(int hallNumber) {
         this.hallNumber = hallNumber;
     }
+
+    @OneToMany(mappedBy = "halls", targetEntity = Pass.class,
+            fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    public Set<Pass> getPass() { return pass; }
+    public void setPass(Set<Pass> pass) { this.pass = pass; }
 }
