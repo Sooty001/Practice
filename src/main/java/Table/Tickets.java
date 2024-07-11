@@ -13,9 +13,9 @@ public class Tickets {
 
 
     public Tickets(float price, String status, String place){
-        setPrice(price);
-        setStatus(status);
-        setPlace(place);
+        this.price = price;
+        this.status = status;
+        this.place = place;
     }
 
 

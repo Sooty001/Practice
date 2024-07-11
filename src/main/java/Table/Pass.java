@@ -11,9 +11,9 @@ public class Pass {
 
 
     public Pass(Movies movies, Sessions sessions, Halls halls){
-        setMovies(movies);
-        setSessions(sessions);
-        setHalls(halls);
+        this.movies = movies;
+        this.sessions = sessions;
+        this.halls = halls;
     }
 
 

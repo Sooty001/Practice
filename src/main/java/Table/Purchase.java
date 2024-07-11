@@ -11,9 +11,9 @@ public class Purchase {
 
 
     public Purchase(Users users, Sessions sessions, Tickets tickets){
-        setUsers(users);
-        setSessions(sessions);
-        setTickets(tickets);
+        this.users = users;
+        this.sessions = sessions;
+        this.tickets = tickets;
     }
 
 

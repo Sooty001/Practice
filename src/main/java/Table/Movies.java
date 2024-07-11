@@ -17,13 +17,13 @@ public class Movies {
 
 
     public Movies(String title, int releaseYear, String genre, String director, int duration, float rating, int ageLimit){
-        setTitle(title);
-        setReleaseYear(releaseYear);
-        setGenre(genre);
-        setDirector(director);
-        setDuration(duration);
-        setRating(rating);
-        setAgeLimit(ageLimit);
+        this.title = title;
+        this.releaseYear = releaseYear;
+        this.genre = genre;
+        this.director = director;
+        this.duration = duration;
+        this.rating = rating;
+        this.ageLimit = ageLimit;
     }
 
     @Id

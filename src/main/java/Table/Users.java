@@ -16,12 +16,12 @@ public class Users {
 
 
     public Users(String last_name, String first_name, String patronymic, String email, String telephone, int age){
-        setFirst_name(first_name);
-        setLast_name(last_name);
-        setPatronymic(patronymic);
-        setEmail(email);
-        setTelephone(telephone);
-        setAge(age);
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.patronymic = patronymic;
+        this.email = email;
+        this.telephone = telephone;
+        this.age = age;
     }
 
 

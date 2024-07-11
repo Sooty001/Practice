@@ -13,9 +13,9 @@ public class Halls {
 
 
     public Halls(int seats, String type, int hallNumber) {
-        setSeats(seats);
-        setType(type);
-        setHallNumber(hallNumber);
+        this.seats = seats;
+        this.type = type;
+        this.hallNumber = hallNumber;
     }
 
 

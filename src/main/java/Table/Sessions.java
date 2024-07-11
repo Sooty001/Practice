@@ -14,8 +14,8 @@ public class Sessions {
 
 
     public Sessions(String start_time, Date date) {
-        setStart_time(start_time);
-        setDate(date);
+        this.start_time = start_time;
+        this.date = date;
     }
 
 
